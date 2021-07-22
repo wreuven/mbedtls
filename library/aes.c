@@ -872,7 +872,11 @@ int mbedtls_internal_aes_encrypt( mbedtls_aes_context *ctx,
         uint32_t X[4];
         uint32_t Y[4];
     } t;
-
+    
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_internal_aes_encrypt\n"); 
+       
     GET_UINT32_LE( t.X[0], input,  0 ); t.X[0] ^= *RK++;
     GET_UINT32_LE( t.X[1], input,  4 ); t.X[1] ^= *RK++;
     GET_UINT32_LE( t.X[2], input,  8 ); t.X[2] ^= *RK++;
@@ -945,6 +949,10 @@ int mbedtls_internal_aes_decrypt( mbedtls_aes_context *ctx,
         uint32_t X[4];
         uint32_t Y[4];
     } t;
+    
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_internal_aes_decrypt\n"); 
 
     GET_UINT32_LE( t.X[0], input,  0 ); t.X[0] ^= *RK++;
     GET_UINT32_LE( t.X[1], input,  4 ); t.X[1] ^= *RK++;
@@ -1016,6 +1024,11 @@ int mbedtls_aes_crypt_ecb( mbedtls_aes_context *ctx,
     AES_VALIDATE_RET( output != NULL );
     AES_VALIDATE_RET( mode == MBEDTLS_AES_ENCRYPT ||
                       mode == MBEDTLS_AES_DECRYPT );
+    
+    
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_crypt_ecb %s\n", mode == MBEDTLS_AES_ENCRYPT ? "MBEDTLS_AES_ENCRYPT" : "MBEDTLS_AES_DECRYPT");     
 
 #if defined(MBEDTLS_AESNI_C) && defined(MBEDTLS_HAVE_X86_64)
     if( mbedtls_aesni_has_support( MBEDTLS_AESNI_AES ) )
@@ -1060,6 +1073,10 @@ int mbedtls_aes_crypt_cbc( mbedtls_aes_context *ctx,
     AES_VALIDATE_RET( iv != NULL );
     AES_VALIDATE_RET( input != NULL );
     AES_VALIDATE_RET( output != NULL );
+    
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_crypt_cbc %s\n", mode == MBEDTLS_AES_ENCRYPT ? "MBEDTLS_AES_ENCRYPT" : "MBEDTLS_AES_DECRYPT");        
 
     if( length % 16 )
         return( MBEDTLS_ERR_AES_INVALID_INPUT_LENGTH );
@@ -1192,6 +1209,11 @@ int mbedtls_aes_crypt_xts( mbedtls_aes_xts_context *ctx,
     AES_VALIDATE_RET( data_unit != NULL );
     AES_VALIDATE_RET( input != NULL );
     AES_VALIDATE_RET( output != NULL );
+    
+        
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_crypt_xts %s\n", mode == MBEDTLS_AES_ENCRYPT ? "MBEDTLS_AES_ENCRYPT" : "MBEDTLS_AES_DECRYPT");     
 
     /* Data units must be at least 16 bytes long. */
     if( length < 16 )
@@ -1301,6 +1323,11 @@ int mbedtls_aes_crypt_cfb128( mbedtls_aes_context *ctx,
     AES_VALIDATE_RET( iv != NULL );
     AES_VALIDATE_RET( input != NULL );
     AES_VALIDATE_RET( output != NULL );
+    
+            
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_crypt_cfb128 %s\n", mode == MBEDTLS_AES_ENCRYPT ? "MBEDTLS_AES_ENCRYPT" : "MBEDTLS_AES_DECRYPT");    
 
     n = *iv_off;
 
@@ -1358,6 +1385,12 @@ int mbedtls_aes_crypt_cfb8( mbedtls_aes_context *ctx,
     AES_VALIDATE_RET( iv != NULL );
     AES_VALIDATE_RET( input != NULL );
     AES_VALIDATE_RET( output != NULL );
+    
+            
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_crypt_cfb8 %s\n", mode == MBEDTLS_AES_ENCRYPT ? "MBEDTLS_AES_ENCRYPT" : "MBEDTLS_AES_DECRYPT");       
+    
     while( length-- )
     {
         memcpy( ov, iv, 16 );
@@ -1444,6 +1477,11 @@ int mbedtls_aes_crypt_ctr( mbedtls_aes_context *ctx,
     AES_VALIDATE_RET( stream_block != NULL );
     AES_VALIDATE_RET( input != NULL );
     AES_VALIDATE_RET( output != NULL );
+    
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_crypt_ctr\n");       
+
 
     n = *nc_off;
 
