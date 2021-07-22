@@ -208,7 +208,7 @@ typedef void mbedtls_pk_restart_ctx;
  */
 static inline mbedtls_rsa_context *mbedtls_pk_rsa( const mbedtls_pk_context pk )
 {
-    return( (mbedtls_rsa_context *) (pk).MBEDTLS_PRIVATE(pk_ctx) );
+    return (mbedtls_rsa_context *) (pk).MBEDTLS_PRIVATE(pk_ctx) ;
 }
 #endif /* MBEDTLS_RSA_C */
 
@@ -221,7 +221,7 @@ static inline mbedtls_rsa_context *mbedtls_pk_rsa( const mbedtls_pk_context pk )
  */
 static inline mbedtls_ecp_keypair *mbedtls_pk_ec( const mbedtls_pk_context pk )
 {
-    return( (mbedtls_ecp_keypair *) (pk).MBEDTLS_PRIVATE(pk_ctx) );
+    return (mbedtls_ecp_keypair *) (pk).MBEDTLS_PRIVATE(pk_ctx) ;
 }
 #endif /* MBEDTLS_ECP_C */
 
@@ -377,7 +377,7 @@ size_t mbedtls_pk_get_bitlen( const mbedtls_pk_context *ctx );
  */
 static inline size_t mbedtls_pk_get_len( const mbedtls_pk_context *ctx )
 {
-    return( ( mbedtls_pk_get_bitlen( ctx ) + 7 ) / 8 );
+    return ( mbedtls_pk_get_bitlen( ctx ) + 7 ) / 8 ;
 }
 
 /**

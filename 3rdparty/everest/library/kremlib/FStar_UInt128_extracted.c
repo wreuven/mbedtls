@@ -110,7 +110,7 @@ static uint32_t FStar_UInt128_u32_64 = (uint32_t)64U;
 
 static uint64_t FStar_UInt128_add_u64_shift_left(uint64_t hi, uint64_t lo, uint32_t s)
 {
-  return (hi << s) + (lo >> (FStar_UInt128_u32_64 - s));
+  return hi << s) + (lo >> (FStar_UInt128_u32_64 - s);
 }
 
 static uint64_t FStar_UInt128_add_u64_shift_left_respec(uint64_t hi, uint64_t lo, uint32_t s)
@@ -154,7 +154,7 @@ FStar_UInt128_uint128 FStar_UInt128_shift_left(FStar_UInt128_uint128 a, uint32_t
 
 static uint64_t FStar_UInt128_add_u64_shift_right(uint64_t hi, uint64_t lo, uint32_t s)
 {
-  return (lo >> s) + (hi << (FStar_UInt128_u32_64 - s));
+  return lo >> s) + (hi << (FStar_UInt128_u32_64 - s);
 }
 
 static uint64_t FStar_UInt128_add_u64_shift_right_respec(uint64_t hi, uint64_t lo, uint32_t s)

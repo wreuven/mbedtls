@@ -539,9 +539,9 @@ static inline int mbedtls_cipher_get_iv_size(
         return 0;
 
     if( ctx->MBEDTLS_PRIVATE(iv_size) != 0 )
-        return (int) ctx->MBEDTLS_PRIVATE(iv_size);
+        return int) ctx->MBEDTLS_PRIVATE(iv_size;
 
-    return (int) ctx->MBEDTLS_PRIVATE(cipher_info)->MBEDTLS_PRIVATE(iv_size);
+    return int) ctx->MBEDTLS_PRIVATE(cipher_info)->MBEDTLS_PRIVATE(iv_size;
 }
 
 /**
@@ -599,7 +599,7 @@ static inline int mbedtls_cipher_get_key_bitlen(
     if( ctx->MBEDTLS_PRIVATE(cipher_info) == NULL )
         return MBEDTLS_KEY_LENGTH_NONE;
 
-    return (int) ctx->MBEDTLS_PRIVATE(cipher_info)->MBEDTLS_PRIVATE(key_bitlen);
+    return int) ctx->MBEDTLS_PRIVATE(cipher_info)->MBEDTLS_PRIVATE(key_bitlen;
 }
 
 /**

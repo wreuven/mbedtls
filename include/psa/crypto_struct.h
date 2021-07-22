@@ -93,7 +93,7 @@ struct psa_hash_operation_s
 static inline struct psa_hash_operation_s psa_hash_operation_init( void )
 {
     const struct psa_hash_operation_s v = PSA_HASH_OPERATION_INIT;
-    return( v );
+    return v ;
 }
 
 struct psa_cipher_operation_s
@@ -118,7 +118,7 @@ struct psa_cipher_operation_s
 static inline struct psa_cipher_operation_s psa_cipher_operation_init( void )
 {
     const struct psa_cipher_operation_s v = PSA_CIPHER_OPERATION_INIT;
-    return( v );
+    return v ;
 }
 
 /* Include the context definition for the compiled-in drivers for the composite
@@ -143,7 +143,7 @@ struct psa_mac_operation_s
 static inline struct psa_mac_operation_s psa_mac_operation_init( void )
 {
     const struct psa_mac_operation_s v = PSA_MAC_OPERATION_INIT;
-    return( v );
+    return v ;
 }
 
 struct psa_aead_operation_s
@@ -164,7 +164,7 @@ struct psa_aead_operation_s
 static inline struct psa_aead_operation_s psa_aead_operation_init( void )
 {
     const struct psa_aead_operation_s v = PSA_AEAD_OPERATION_INIT;
-    return( v );
+    return v ;
 }
 
 #if defined(MBEDTLS_PSA_BUILTIN_ALG_HKDF)
@@ -251,7 +251,7 @@ static inline struct psa_key_derivation_s psa_key_derivation_operation_init(
         void )
 {
     const struct psa_key_derivation_s v = PSA_KEY_DERIVATION_OPERATION_INIT;
-    return( v );
+    return v ;
 }
 
 struct psa_key_policy_s
@@ -266,7 +266,7 @@ typedef struct psa_key_policy_s psa_key_policy_t;
 static inline struct psa_key_policy_s psa_key_policy_init( void )
 {
     const struct psa_key_policy_s v = PSA_KEY_POLICY_INIT;
-    return( v );
+    return v ;
 }
 
 /* The type used internally for key sizes.
@@ -339,7 +339,7 @@ struct psa_key_attributes_s
 static inline struct psa_key_attributes_s psa_key_attributes_init( void )
 {
     const struct psa_key_attributes_s v = PSA_KEY_ATTRIBUTES_INIT;
-    return( v );
+    return v ;
 }
 
 static inline void psa_set_key_id( psa_key_attributes_t *attributes,
@@ -361,7 +361,7 @@ static inline void psa_set_key_id( psa_key_attributes_t *attributes,
 static inline mbedtls_svc_key_id_t psa_get_key_id(
     const psa_key_attributes_t *attributes )
 {
-    return( attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(id) );
+    return attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(id) ;
 }
 
 #ifdef MBEDTLS_PSA_CRYPTO_KEY_ID_ENCODES_OWNER
@@ -389,7 +389,7 @@ static inline void psa_set_key_lifetime( psa_key_attributes_t *attributes,
 static inline psa_key_lifetime_t psa_get_key_lifetime(
     const psa_key_attributes_t *attributes )
 {
-    return( attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(lifetime) );
+    return attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(lifetime) ;
 }
 
 static inline void psa_extend_key_usage_flags( psa_key_usage_t *usage_flags )
@@ -411,7 +411,7 @@ static inline void psa_set_key_usage_flags(psa_key_attributes_t *attributes,
 static inline psa_key_usage_t psa_get_key_usage_flags(
     const psa_key_attributes_t *attributes )
 {
-    return( attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(policy).MBEDTLS_PRIVATE(usage) );
+    return attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(policy).MBEDTLS_PRIVATE(usage) ;
 }
 
 static inline void psa_set_key_algorithm( psa_key_attributes_t *attributes,
@@ -423,7 +423,7 @@ static inline void psa_set_key_algorithm( psa_key_attributes_t *attributes,
 static inline psa_algorithm_t psa_get_key_algorithm(
     const psa_key_attributes_t *attributes )
 {
-    return( attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(policy).MBEDTLS_PRIVATE(alg) );
+    return attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(policy).MBEDTLS_PRIVATE(alg) ;
 }
 
 /* This function is declared in crypto_extra.h, which comes after this
@@ -454,7 +454,7 @@ static inline void psa_set_key_type( psa_key_attributes_t *attributes,
 static inline psa_key_type_t psa_get_key_type(
     const psa_key_attributes_t *attributes )
 {
-    return( attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(type) );
+    return attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(type) ;
 }
 
 static inline void psa_set_key_bits( psa_key_attributes_t *attributes,
@@ -469,7 +469,7 @@ static inline void psa_set_key_bits( psa_key_attributes_t *attributes,
 static inline size_t psa_get_key_bits(
     const psa_key_attributes_t *attributes )
 {
-    return( attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(bits) );
+    return attributes->MBEDTLS_PRIVATE(core).MBEDTLS_PRIVATE(bits) ;
 }
 
 #ifdef __cplusplus

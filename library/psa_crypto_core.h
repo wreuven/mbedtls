@@ -43,7 +43,7 @@ static inline int mbedtls_psa_safer_memcmp(
     for( i = 0; i < n; i++ )
         diff |= a[i] ^ b[i];
 
-    return( diff );
+    return diff ;
 }
 
 /** The data structure representing a key slot, containing key material
@@ -103,7 +103,7 @@ typedef struct
  */
 static inline int psa_is_key_slot_occupied( const psa_key_slot_t *slot )
 {
-    return( slot->attr.type != 0 );
+    return slot->attr.type != 0 ;
 }
 
 /** Test whether a key slot is locked.
@@ -116,7 +116,7 @@ static inline int psa_is_key_slot_occupied( const psa_key_slot_t *slot )
  */
 static inline int psa_is_key_slot_locked( const psa_key_slot_t *slot )
 {
-    return( slot->lock_count > 0 );
+    return slot->lock_count > 0 ;
 }
 
 /** Retrieve flags from psa_key_slot_t::attr::core::flags.
@@ -130,7 +130,7 @@ static inline int psa_is_key_slot_locked( const psa_key_slot_t *slot )
 static inline uint16_t psa_key_slot_get_flags( const psa_key_slot_t *slot,
                                                uint16_t mask )
 {
-    return( slot->attr.flags & mask );
+    return slot->attr.flags & mask ;
 }
 
 /** Set flags in psa_key_slot_t::attr::core::flags.
@@ -179,7 +179,7 @@ static inline void psa_key_slot_clear_bits( psa_key_slot_t *slot,
 static inline psa_key_slot_number_t psa_key_slot_get_slot_number(
     const psa_key_slot_t *slot )
 {
-    return( *( (psa_key_slot_number_t *)( slot->key.data ) ) );
+    return *( (psa_key_slot_number_t *)( slot->key.data ) ) ;
 }
 #endif
 

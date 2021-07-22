@@ -50,7 +50,7 @@
 
 /* Prims_nat not yet in scope */
 inline static int32_t krml_time() {
-  return (int32_t)time(NULL);
+  return int32_t)time(NULL;
 }
 
 #  define KRML_HOST_TIME krml_time
