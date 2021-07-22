@@ -31,8 +31,10 @@
 extern "C" {
 #endif
 
+// clang-format off
 #define MBEDTLS_ERR_THREADING_BAD_INPUT_DATA              -0x001C  /**< Bad input parameters to function. */
 #define MBEDTLS_ERR_THREADING_MUTEX_ERROR                 -0x001E  /**< Locking / unlocking / free failed with error code. */
+// clang-format on
 
 #if defined(MBEDTLS_THREADING_PTHREAD)
 #include <pthread.h>

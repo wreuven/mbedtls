@@ -46,6 +46,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
+// clang-format off
 #define MBEDTLS_ERR_NET_SOCKET_FAILED                     -0x0042  /**< Failed to open a socket. */
 #define MBEDTLS_ERR_NET_CONNECT_FAILED                    -0x0044  /**< The connection to the given server / port failed. */
 #define MBEDTLS_ERR_NET_BIND_FAILED                       -0x0046  /**< Binding of the socket failed. */
@@ -59,6 +60,7 @@
 #define MBEDTLS_ERR_NET_INVALID_CONTEXT                   -0x0045  /**< The context is invalid, eg because it was free()ed. */
 #define MBEDTLS_ERR_NET_POLL_FAILED                       -0x0047  /**< Polling the net context failed. */
 #define MBEDTLS_ERR_NET_BAD_INPUT_DATA                    -0x0049  /**< Input invalid. */
+// clang-format on
 
 #define MBEDTLS_NET_LISTEN_BACKLOG         10 /**< The backlog that listen() should use. */
 

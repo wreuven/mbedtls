@@ -38,6 +38,7 @@
 #include "mbedtls/threading.h"
 #endif
 
+// clang-format off
 /*
  * RSA Error codes
  */
@@ -50,6 +51,7 @@
 #define MBEDTLS_ERR_RSA_VERIFY_FAILED                     -0x4380  /**< The PKCS#1 verification failed. */
 #define MBEDTLS_ERR_RSA_OUTPUT_TOO_LARGE                  -0x4400  /**< The output buffer for decryption is not large enough. */
 #define MBEDTLS_ERR_RSA_RNG_FAILED                        -0x4480  /**< The random generator failed to generate non-zeros. */
+// clang-format on
 
 /*
  * RSA constants

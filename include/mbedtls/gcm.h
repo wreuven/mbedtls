@@ -41,8 +41,10 @@
 #define MBEDTLS_GCM_ENCRYPT     1
 #define MBEDTLS_GCM_DECRYPT     0
 
+// clang-format off
 #define MBEDTLS_ERR_GCM_AUTH_FAILED                       -0x0012  /**< Authenticated decryption failed. */
 #define MBEDTLS_ERR_GCM_BAD_INPUT                         -0x0014  /**< Bad input parameters to function. */
+// clang-format on
 
 #ifdef __cplusplus
 extern "C" {

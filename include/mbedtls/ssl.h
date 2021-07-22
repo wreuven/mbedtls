@@ -56,6 +56,7 @@
 #include "psa/crypto.h"
 #endif /* MBEDTLS_USE_PSA_CRYPTO */
 
+// clang-format off
 /*
  * SSL Error codes
  */
@@ -124,6 +125,7 @@
 #define MBEDTLS_ERR_SSL_UNEXPECTED_CID                    -0x6000  /**< An encrypted DTLS-frame with an unexpected CID was received. */
 #define MBEDTLS_ERR_SSL_VERSION_MISMATCH                  -0x5F00  /**< An operation failed due to an unexpected version or configuration. */
 #define MBEDTLS_ERR_SSL_BAD_CONFIG                        -0x5E80  /**< Invalid value in SSL config */
+// clang-format on
 
 /*
  * Various constants

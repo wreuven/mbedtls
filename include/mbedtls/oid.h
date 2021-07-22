@@ -38,8 +38,10 @@
 #include "mbedtls/md.h"
 #endif
 
+// clang-format off
 #define MBEDTLS_ERR_OID_NOT_FOUND                         -0x002E  /**< OID is not found. */
 #define MBEDTLS_ERR_OID_BUF_TOO_SMALL                     -0x000B  /**< output buffer is too small */
+// clang-format on
 
 /* This is for the benefit of X.509, but defined here in order to avoid
  * having a "backwards" include of x.509.h here */

@@ -27,6 +27,7 @@
 
 #include <stddef.h>
 
+// clang-format off
 /**
  * \name PEM Error codes
  * These error codes are returned in case of errors reading the
@@ -43,6 +44,7 @@
 #define MBEDTLS_ERR_PEM_FEATURE_UNAVAILABLE               -0x1400  /**< Unavailable feature, e.g. hashing/encryption combination. */
 #define MBEDTLS_ERR_PEM_BAD_INPUT_DATA                    -0x1480  /**< Bad input parameters to function. */
 /* \} name */
+// clang-format on
 
 #ifdef __cplusplus
 extern "C" {

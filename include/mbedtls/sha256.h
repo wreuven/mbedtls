@@ -31,7 +31,9 @@
 #include <stddef.h>
 #include <stdint.h>
 
+// clang-format off
 #define MBEDTLS_ERR_SHA256_BAD_INPUT_DATA                 -0x0074  /**< SHA-256 input data was malformed. */
+// clang-format on
 
 #ifdef __cplusplus
 extern "C" {

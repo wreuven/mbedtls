@@ -39,6 +39,7 @@
 
 #include "mbedtls/bignum.h"
 
+// clang-format off
 /*
  * ECP error codes
  */
@@ -51,6 +52,7 @@
 #define MBEDTLS_ERR_ECP_INVALID_KEY                       -0x4C80  /**< Invalid private or public key. */
 #define MBEDTLS_ERR_ECP_SIG_LEN_MISMATCH                  -0x4C00  /**< The buffer contains a valid signature followed by more data. */
 #define MBEDTLS_ERR_ECP_IN_PROGRESS                       -0x4B00  /**< Operation in progress, call again with the same parameters to continue. */
+// clang-format on
 
 /* Flags indicating whether to include code that is specific to certain
  * types of curves. These flags are for internal library use only. */

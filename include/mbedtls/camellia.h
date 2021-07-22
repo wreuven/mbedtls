@@ -33,9 +33,11 @@
 #define MBEDTLS_CAMELLIA_ENCRYPT     1
 #define MBEDTLS_CAMELLIA_DECRYPT     0
 
+// clang-format off
 #define MBEDTLS_ERR_CAMELLIA_BAD_INPUT_DATA -0x0024 /**< Bad input data. */
 
 #define MBEDTLS_ERR_CAMELLIA_INVALID_INPUT_LENGTH -0x0026 /**< Invalid data input length. */
+// clang-format on
 
 #ifdef __cplusplus
 extern "C" {

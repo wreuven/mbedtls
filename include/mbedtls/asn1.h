@@ -36,6 +36,7 @@
  * \{
  */
 
+// clang-format off
 /**
  * \name ASN1 Error codes
  * These error codes are OR'ed to X509 error codes for
@@ -52,6 +53,7 @@
 #define MBEDTLS_ERR_ASN1_BUF_TOO_SMALL                    -0x006C  /**< Buffer too small when writing ASN.1 data structure. */
 
 /* \} name */
+// clang-format on
 
 /**
  * \name DER constants

@@ -29,12 +29,14 @@
 
 #include "mbedtls/md.h"
 
+// clang-format off
 /**
  *  \name HKDF Error codes
  *  \{
  */
 #define MBEDTLS_ERR_HKDF_BAD_INPUT_DATA  -0x5F80  /**< Bad input parameters to function. */
 /* \} name */
+// clang-format on
 
 #ifdef __cplusplus
 extern "C" {

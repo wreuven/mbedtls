@@ -38,7 +38,9 @@
 #include <stdint.h>
 #include <stddef.h>
 
+// clang-format off
 #define MBEDTLS_ERR_POLY1305_BAD_INPUT_DATA         -0x0057 /**< Invalid input parameter(s). */
+// clang-format on
 
 #ifdef __cplusplus
 extern "C" {

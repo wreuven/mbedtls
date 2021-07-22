@@ -36,7 +36,9 @@
 #define MBEDTLS_DES_ENCRYPT     1
 #define MBEDTLS_DES_DECRYPT     0
 
+// clang-format off
 #define MBEDTLS_ERR_DES_INVALID_INPUT_LENGTH              -0x0032  /**< The data input has an invalid length. */
+// clang-format on
 
 #define MBEDTLS_DES_KEY_SIZE    8
 

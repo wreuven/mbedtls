@@ -49,6 +49,7 @@
 #define inline __inline
 #endif
 
+// clang-format off
 #define MBEDTLS_ERR_PK_ALLOC_FAILED        -0x3F80  /**< Memory allocation failed. */
 #define MBEDTLS_ERR_PK_TYPE_MISMATCH       -0x3F00  /**< Type mismatch, eg attempt to encrypt with an ECDSA key */
 #define MBEDTLS_ERR_PK_BAD_INPUT_DATA      -0x3E80  /**< Bad input parameters to function. */
@@ -64,6 +65,7 @@
 #define MBEDTLS_ERR_PK_FEATURE_UNAVAILABLE -0x3980  /**< Unavailable feature, e.g. RSA disabled for RSA key. */
 #define MBEDTLS_ERR_PK_SIG_LEN_MISMATCH    -0x3900  /**< The buffer contains a valid signature followed by more data. */
 #define MBEDTLS_ERR_PK_BUFFER_TOO_SMALL    -0x3880  /**< The output buffer is too small. */
+// clang-format on
 
 #ifdef __cplusplus
 extern "C" {

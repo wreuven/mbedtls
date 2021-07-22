@@ -49,6 +49,7 @@
 #define MBEDTLS_X509_MAX_INTERMEDIATE_CA   8
 #endif
 
+// clang-format off
 /**
  * \name X509 Error codes
  * \{
@@ -74,6 +75,7 @@
 #define MBEDTLS_ERR_X509_BUFFER_TOO_SMALL                 -0x2980  /**< Destination buffer is too small. */
 #define MBEDTLS_ERR_X509_FATAL_ERROR                      -0x3000  /**< A fatal error occurred, eg the chain is too long or the vrfy callback failed. */
 /* \} name */
+// clang-format on
 
 /**
  * \name X509 Verify codes

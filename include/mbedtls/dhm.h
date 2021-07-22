@@ -67,6 +67,7 @@
 #include "mbedtls/build_info.h"
 #include "mbedtls/bignum.h"
 
+// clang-format off
 /*
  * DHM Error codes
  */
@@ -80,6 +81,7 @@
 #define MBEDTLS_ERR_DHM_ALLOC_FAILED                      -0x3400  /**< Allocation of memory failed. */
 #define MBEDTLS_ERR_DHM_FILE_IO_ERROR                     -0x3480  /**< Read or write of file failed. */
 #define MBEDTLS_ERR_DHM_SET_GROUP_FAILED                  -0x3580  /**< Setting the modulus and generator failed. */
+// clang-format on
 
 /** Which parameter to access in mbedtls_dhm_get_value(). */
 typedef enum

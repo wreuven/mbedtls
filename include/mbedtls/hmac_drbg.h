@@ -35,6 +35,7 @@
 #include "mbedtls/threading.h"
 #endif
 
+// clang-format off
 /*
  * Error codes
  */
@@ -42,6 +43,7 @@
 #define MBEDTLS_ERR_HMAC_DRBG_INPUT_TOO_BIG                -0x0005  /**< Input too large (Entropy + additional). */
 #define MBEDTLS_ERR_HMAC_DRBG_FILE_IO_ERROR                -0x0007  /**< Read/write error in file. */
 #define MBEDTLS_ERR_HMAC_DRBG_ENTROPY_SOURCE_FAILED        -0x0009  /**< The entropy source failed. */
+// clang-format on
 
 /**
  * \name SECTION: Module settings
