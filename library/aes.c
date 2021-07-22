@@ -751,6 +751,10 @@ static int mbedtls_aes_xts_decode_keys( const unsigned char *key,
 {
     const unsigned int half_keybits = keybits / 2;
     const unsigned int half_keybytes = half_keybits / 8;
+    
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_setkey_enc %d\n", keybits);     
 
     switch( keybits )
     {
@@ -777,6 +781,10 @@ int mbedtls_aes_xts_setkey_enc( mbedtls_aes_xts_context *ctx,
 
     AES_VALIDATE_RET( ctx != NULL );
     AES_VALIDATE_RET( key != NULL );
+    
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_xts_setkey_enc %d\n", keybits);     
 
     ret = mbedtls_aes_xts_decode_keys( key, keybits, &key1, &key1bits,
                                        &key2, &key2bits );
@@ -802,6 +810,10 @@ int mbedtls_aes_xts_setkey_dec( mbedtls_aes_xts_context *ctx,
 
     AES_VALIDATE_RET( ctx != NULL );
     AES_VALIDATE_RET( key != NULL );
+    
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_xts_setkey_dec %d\n", keybits);         
 
     ret = mbedtls_aes_xts_decode_keys( key, keybits, &key1, &key1bits,
                                        &key2, &key2bits );
@@ -939,6 +951,9 @@ void mbedtls_aes_encrypt( mbedtls_aes_context *ctx,
                           const unsigned char input[16],
                           unsigned char output[16] )
 {
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_encrypt\n");      
     mbedtls_internal_aes_encrypt( ctx, input, output );
 }
 #endif /* !MBEDTLS_DEPRECATED_REMOVED */
@@ -1016,6 +1031,11 @@ void mbedtls_aes_decrypt( mbedtls_aes_context *ctx,
                           const unsigned char input[16],
                           unsigned char output[16] )
 {
+    
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_decrypt\n"); 
+    
     mbedtls_internal_aes_decrypt( ctx, input, output );
 }
 #endif /* !MBEDTLS_DEPRECATED_REMOVED */
