@@ -554,6 +554,11 @@ int mbedtls_aes_setkey_enc( mbedtls_aes_context *ctx, const unsigned char *key,
     unsigned int i;
     uint32_t *RK;
 
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_setkey_enc %d\n", keybits); 
+    
+    
     AES_VALIDATE_RET( ctx != NULL );
     AES_VALIDATE_RET( key != NULL );
 
@@ -674,6 +679,10 @@ int mbedtls_aes_setkey_dec( mbedtls_aes_context *ctx, const unsigned char *key,
 
     AES_VALIDATE_RET( ctx != NULL );
     AES_VALIDATE_RET( key != NULL );
+    
+    static int cnt=0;  
+    if ((cnt++ % 100) == 0) 
+        printf("mbedtls_aes_setkey_dec %d\n", keybits); 
 
     mbedtls_aes_init( &cty );
 
