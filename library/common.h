@@ -41,9 +41,9 @@
  * ```
  */
 #if defined(MBEDTLS_TEST_HOOKS)
-#define MBEDTLS_STATIC_TESTABLE
+#    define MBEDTLS_STATIC_TESTABLE
 #else
-#define MBEDTLS_STATIC_TESTABLE static
+#    define MBEDTLS_STATIC_TESTABLE static
 #endif
 
 /** Allow library to access its structs' private members.
