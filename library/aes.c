@@ -556,7 +556,7 @@ int mbedtls_aes_setkey_enc( mbedtls_aes_context *ctx, const unsigned char *key,
 
     static int cnt=0;  
     if ((cnt++ % 100) == 0) 
-        printf("mbedtls_aes_setkey_enc %d\n", keybits); 
+        printf("mbedtls_aes_setkey_enc %u\n", keybits); 
     
     
     AES_VALIDATE_RET( ctx != NULL );
@@ -682,7 +682,7 @@ int mbedtls_aes_setkey_dec( mbedtls_aes_context *ctx, const unsigned char *key,
     
     static int cnt=0;  
     if ((cnt++ % 100) == 0) 
-        printf("mbedtls_aes_setkey_dec %d\n", keybits); 
+        printf("mbedtls_aes_setkey_dec %u\n", keybits); 
 
     mbedtls_aes_init( &cty );
 
@@ -754,7 +754,7 @@ static int mbedtls_aes_xts_decode_keys( const unsigned char *key,
     
     static int cnt=0;  
     if ((cnt++ % 100) == 0) 
-        printf("mbedtls_aes_setkey_enc %d\n", keybits);     
+        printf("mbedtls_aes_setkey_enc %u\n", keybits);     
 
     switch( keybits )
     {
@@ -784,7 +784,7 @@ int mbedtls_aes_xts_setkey_enc( mbedtls_aes_xts_context *ctx,
     
     static int cnt=0;  
     if ((cnt++ % 100) == 0) 
-        printf("mbedtls_aes_xts_setkey_enc %d\n", keybits);     
+        printf("mbedtls_aes_xts_setkey_enc %u\n", keybits);     
 
     ret = mbedtls_aes_xts_decode_keys( key, keybits, &key1, &key1bits,
                                        &key2, &key2bits );
@@ -813,7 +813,7 @@ int mbedtls_aes_xts_setkey_dec( mbedtls_aes_xts_context *ctx,
     
     static int cnt=0;  
     if ((cnt++ % 100) == 0) 
-        printf("mbedtls_aes_xts_setkey_dec %d\n", keybits);         
+        printf("mbedtls_aes_xts_setkey_dec %u\n", keybits);         
 
     ret = mbedtls_aes_xts_decode_keys( key, keybits, &key1, &key1bits,
                                        &key2, &key2bits );
